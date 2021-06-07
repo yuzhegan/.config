@@ -27,7 +27,7 @@ hide_edge_borders none
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -47,7 +47,7 @@ bindsym $mod+shift+ctrl+s exec killall screenkey
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec st -e 'alsamixer'
+bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -59,12 +59,12 @@ bindsym $mod+Ctrl+m exec st -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+b exec st -e 'bmenu'
+bindsym $mod+b exec alacritty -e 'bmenu'
 bindsym $mod+c exec google-chrome-stable
 #bindsym $mod+d exec pcmanfm
 bindsym $mod+n exec ranger
 #bindsym $mod+d exec gksu pcmanfm
-bindsym $mod+F5 exec st -e 'mocp'
+bindsym $mod+F5 exec alacritty -e 'mocp'
 #bindsym $mod+t exec --no-startup-id pkill compton
 #bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
