@@ -27,13 +27,13 @@ hide_edge_borders none
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+s exec --no-startup-id dmenu_recency
+bindsym $mod+s exec --no-startup-id dmenu_run
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -47,7 +47,7 @@ bindsym $mod+shift+ctrl+s exec killall screenkey
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
+bindsym $mod+Ctrl+m exec st -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -59,12 +59,12 @@ bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
+bindsym $mod+b exec st -e 'bmenu'
 bindsym $mod+c exec google-chrome-stable
-bindsym $mod+d exec pcmanfm
-# bindsym $mod+F3 exec ranger
+#bindsym $mod+d exec pcmanfm
+bindsym $mod+n exec ranger
 #bindsym $mod+d exec gksu pcmanfm
-bindsym $mod+F5 exec alacritty -e 'mocp'
+bindsym $mod+F5 exec st -e 'mocp'
 #bindsym $mod+t exec --no-startup-id pkill compton
 #bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -75,20 +75,20 @@ bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 #bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # change wallpaper
-bindsym $mod+b exec variety -n
+#bindsym $mod+b exec variety -n
 bindsym $mod+shift+b exec variety -p
 
 # Switching keyboard layouts
-bindsym $mod+Shift+k exec xmodmap ~/.Xmodmap-cn
-bindsym $mod+Shift+m exec xmodmap ~/.Xmodmap
+bindsym $mod+Shift+u exec xmodmap ~/.Xmodmap-cn
+bindsym $mod+Shift+n exec xmodmap ~/.Xmodmap
 
 # focus_follows_mouse no
 
 # change focus
-bindsym $mod+n focus left
-bindsym $mod+e focus down
-bindsym $mod+u focus up
-bindsym $mod+i focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -97,10 +97,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+n move left
-bindsym $mod+Shift+e move down
-bindsym $mod+Shift+u move up
-bindsym $mod+Shift+i move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -114,7 +114,7 @@ bindsym $mod+r workspace back_and_forth
 bindsym $mod+Shift+r move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
+bindsym $mod+u split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
@@ -136,7 +136,7 @@ bindsym $mod+space focus mode_toggle
 # bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -286,10 +286,10 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-	bindsym n resize shrink width 5 px or 5 ppt
-		bindsym u resize grow height 5 px or 5 ppt
-		bindsym e resize shrink height 5 px or 5 ppt
-		bindsym i resize grow width 5 px or 5 ppt
+		bindsym j resize shrink width 5 px or 5 ppt
+		bindsym k resize grow height 5 px or 5 ppt
+		bindsym h resize shrink height 5 px or 5 ppt
+		bindsym l resize grow width 5 px or 5 ppt
 
 # same bindings, but for the arrow keys
 		bindsym Left resize shrink width 10 px or 10 ppt
@@ -356,37 +356,37 @@ set_from_resource $term_color15    color15
 #bar {
 #status_command ~/cmake-apps/bumblebee-status/bumblebee-status -m cpu memory battery time pasink pasource -p time.format="%H:%M" -t iceberg-powerline
 #}
-bar {
-	id bar-1
-		i3bar_command i3bar
-		status_command i3status
-		position bottom
+#bar {
+	##id bar-1
+		##i3bar_command i3bar
+		##status_command i3status
+		##position bottom
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+### please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+##	tray_output primary
+##	tray_output eDP1
 
-		bindsym button4 nop
-		bindsym button5 nop
-		font xft:URWGothic-Book 16
-		strip_workspace_numbers yes
+		#bindsym button4 nop
+		#bindsym button5 nop
+		##font xft:URWGothic-Book 10
+		#strip_workspace_numbers yes
 
-		colors {
-#background #222D31
-#statusline #F9FAF9
-#separator  #454947
-			background #222222
-			statusline #eeeeee
-			separator #666666
+		#h	colors {
+	##background #222D31
+	##statusline #F9FAF9
+	##separator  #454947
+				##background #222222
+				##statusline #eeeeee
+				##separator #666666
 
-#                      border  backgr. text
-				focused_workspace  #F9FAF9 #16a085 #292F34
-				active_workspace   #595B5B #353836 #FDF6E3
-				inactive_workspace #595B5B #222D31 #EEE8D5
-				binding_mode       #16a085 #2C2C2C #F9FAF9
-				urgent_workspace   #16a085 #FDF6E3 #E5201D
-		}
-}
+	##                      border  backgr. text
+				#focused_workspace  #F9FAF9 #16a085 #292F34
+				#active_workspace   #595B5B #353836 #FDF6E3
+				#inactive_workspace #595B5B #222D31 #EEE8D5
+				#binding_mode       #16a085 #2C2C2C #F9FAF9
+				#urgent_workspace   #16a085 #FDF6E3 #E5201D
+			#}
+#}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
