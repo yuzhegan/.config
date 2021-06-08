@@ -31,19 +31,19 @@ splashupdatesindex: 0
 startuppopupversion: 1
 keybinding:
   universal:
-    prevItem-alt: 'u'
-    nextItem-alt: 'e'
-    prevBlock-alt: 'n'
-    nextBlock-alt: 'i'
+    prevItem-alt: 'k'
+    nextItem-alt: 'j'
+    prevBlock-alt: 'h'
+    nextBlock-alt: 'l'
     nextMatch: '='
     prevMatch: '-'
-    new: 'k'
-    edit: 'o'
+    new: 'n'
+    edit: 'e'
     openFile: 'O'
-    scrollUpMain-alt1: 'U'
-    scrollDownMain-alt1: 'E'
-    scrollUpMain-alt2: '<c-u>'
-    scrollDownMain-alt2: '<c-e>'
+    scrollUpMain-alt1: 'K'
+    scrollDownMain-alt1: 'J'
+    scrollUpMain-alt2: '<c-k>'
+    scrollDownMain-alt2: '<c-j>'
     undo: 'l'
     redo: '<c-r>'
     diffingMenu: 'M'
@@ -51,8 +51,8 @@ keybinding:
   files:
     ignoreFile: 'I'
   commits:
-    moveDownCommit: '<c-e>'
-    moveUpCommit: '<c-u>'
+    moveDownCommit: '<c-j>'
+    moveUpCommit: '<c-k>'
   branches:
     viewGitFlowOptions: 'I'
     setUpstream: 'U'
