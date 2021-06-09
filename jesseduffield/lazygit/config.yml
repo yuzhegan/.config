@@ -44,7 +44,7 @@ keybinding:
     scrollDownMain-alt1: 'J'
     scrollUpMain-alt2: '<c-k>'
     scrollDownMain-alt2: '<c-j>'
-    undo: 'l'
+    undo: 'u'
     redo: '<c-r>'
     diffingMenu: 'M'
     filteringMenu: '<c-f>'
