@@ -114,6 +114,7 @@ inxi
 iproute2
 iputils
 jfsutils
+jupyterlab
 k3b
 kaccounts-providers
 kamera
@@ -148,6 +149,7 @@ kwayland-integration
 kwin
 kwrited
 lazygit
+lazynpm
 less
 lib32-libcanberra
 lib32-libcanberra-pulse
@@ -199,6 +201,7 @@ mobile-broadband-provider-info
 modemmanager
 mpd
 mtpfs
+mutt
 nano
 neovim-git
 networkmanager
