@@ -79,7 +79,7 @@ bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+shift+b exec variety -p
 
 # Switching keyboard layouts
-bindsym $mod+Shift+u exec xmodmap ~/.Xmodmap-cn
+#bindsym $mod+Shift+u exec xmodmap ~/.Xmodmap-cn
 bindsym $mod+Shift+n exec xmodmap ~/.Xmodmap
 
 # focus_follows_mouse no
@@ -318,7 +318,7 @@ exec --no-startup-id fix_xcursor
 exec --no-startup-id ~/.config/i3/run-mailsync.sh
 exec variety
 exec fcitx
-exec xmodmap ~/.Xmodmap
+exec xmodmap ~/.config/.Xmodmap
 #exec_always --no-startup-id ~/.config/i3/tap-to-click.sh
 exec --no-startup-id ~/.config/i3/inverse-scroll.sh
 
