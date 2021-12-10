@@ -23,6 +23,7 @@ class mkcd(Command):
 
     Creates a directory with the name <dirname> and enters it.
     """
+
     def execute(self):
         from os.path import join, expanduser, lexists
         from os import makedirs
@@ -43,7 +44,7 @@ class mkcd(Command):
                                  and not self.fm.settings['show_hidden']):
                     self.fm.cd(s)
                 else:
-                    ## We force ranger to load content before calling `scout`.
+                    # We force ranger to load content before calling `scout`.
                     self.fm.thisdir.load_content(schedule=False)
                     self.fm.execute_console('scout -ae ^{}$'.format(s))
         else:
@@ -60,6 +61,7 @@ class fzf_select(Command):
 
     See: https://github.com/junegunn/fzf
     """
+
     def execute(self):
         import subprocess
         import os.path
@@ -103,8 +105,8 @@ class compress(Command):
         au_flags = parts[1:]
 
         descr = "compressing files in: " + os.path.basename(parts[1])
-        obj = CommandLoader(args=['apack'] + au_flags + \
-                [os.path.relpath(f.path, cwd.path) for f in marked_files], descr=descr, read=True)
+        obj = CommandLoader(args=['apack'] + au_flags +
+                            [os.path.relpath(f.path, cwd.path) for f in marked_files], descr=descr, read=True)
 
         obj.signal_bind('after', refresh)
         self.fm.loader.add(obj)
@@ -145,8 +147,8 @@ class extracthere(Command):
         else:
             descr = "extracting files from: " + os.path.basename(
                 one_file.dirname)
-        obj = CommandLoader(args=['aunpack'] + au_flags \
-                + [f.path for f in copied_files], descr=descr, read=True)
+        obj = CommandLoader(args=['aunpack'] + au_flags
+                            + [f.path for f in copied_files], descr=descr, read=True)
 
         obj.signal_bind('after', refresh)
         self.fm.loader.add(obj)
