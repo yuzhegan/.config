@@ -75,3 +75,22 @@ I use `adapta-gtk-theme` and `arc-icon-theme`.
 
 ## Arch Packages I Installed:
 See [my-packages.txt](https://github.com/theniceboy/.config/blob/master/my-packages.txt)
+
+
+## ranger config
+want to `comprss` and `extracthere`  you need to install:
+```
+yay -S atool
+```
+want to change `md` to `pdf` you need to install:
+```
+yay -S pandoc
+yay -S texlive-core
+```
+
+want to use download from `youtube` you need to install:
+```
+yay -S youtubedl
+```
+
+
