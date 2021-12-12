@@ -90,7 +90,7 @@ yay -S texlive-core
 
 want to use download from `youtube` you need to install:
 ```
-yay -S youtubedl
+yay -S youtube-dl
 ```
 
 
