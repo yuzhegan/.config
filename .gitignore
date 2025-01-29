@@ -1,0 +1,22 @@
+
+#ignore everythings
+/*
+/*/
+
+
+# ... but this
+
+
+
+
+!/.gitignore
+!/.profile
+!/.tmux.conf
+!/fish/
+!/github-copi/
+!/jesseduffie/
+!/neofetch/
+!/omf/
+!/ranger/
+!/tmux/
+!/yazi/
